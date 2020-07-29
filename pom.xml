@@ -38,6 +38,14 @@
         <wiremock.version>2.5.1</wiremock.version>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>bintray-andriimartynov-maven</id>
+            <name>andriimartynov-maven</name>
+            <url>https://api.bintray.com/maven/andriimartynov/maven/sentry-logback/;publish=1</url>
+        </repository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>io.sentry</groupId>
@@ -127,6 +135,20 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
