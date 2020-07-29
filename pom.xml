@@ -129,6 +129,5 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>whatalokation-grpc-client</finalName>
     </build>
 </project>
