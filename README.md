@@ -1,4 +1,5 @@
 # Sentry Logback
+[![Download](https://api.bintray.com/packages/andriimartynov/maven/sentry-logback/images/download.svg) ](https://bintray.com/andriimartynov/maven/sentry-logback/_latestVersion)
 ![Build](https://github.com/andriimartynov/sentry-logback/workflows/Build/badge.svg)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
@@ -17,6 +18,33 @@ ERROR [2019-09-28 10:51:34,604] [qwerty-akka.actor.default-dispatcher-4] a.m.c.b
 ```
 
 ## Usage
+
+### Dependency
+
+To resolve artifacts through Artifactory, simply add the following code snippet to your pom.xml file:
+
+```xml
+    <repositories>
+        <repository>
+            <id>jcenter</id>
+            <name>jcenter</name>
+            <url>https://jcenter.bintray.com</url>
+        </repository>
+    </repositories>
+```
+
+Choose dependency snippet:
+
+```xml
+    <dependency>
+        <groupId>com.github.andriimartynov</groupId>
+        <artifactId>sentry-logback</artifactId>
+        <version>1.7.29</version>
+        <type>pom</type>
+    </dependency>
+```
+
+Add sentry appender to your logback.xml:
 
 ```xml
 <configuration>
