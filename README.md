@@ -39,7 +39,7 @@ Choose dependency snippet:
     <dependency>
         <groupId>com.github.andriimartynov</groupId>
         <artifactId>sentry-logback</artifactId>
-        <version>1.7.29</version>
+        <version>1.7.30</version>
         <type>pom</type>
     </dependency>
 ```
